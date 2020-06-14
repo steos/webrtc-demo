@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      input::placeholder {
+        color: #ccc;
+      }
+      .space-y-0 > * + * {
+        margin-top: 0.5em;
+      }
+      .space-y-1 > * + * {
+        margin-top: 1em;
+      }
+      .space-y-2 > * + * {
+        margin-top: 1.5em;
+      }
+      .space-y-3 > * + * {
+        margin-top: 2.5em;
+      }
+      .space-x-1 > * + * {
+        margin-left: 0.5em;
+      }
+      .word-wrap {
+        word-break: break-all;
+      }
+      .sans-serif {
+        font-family: "Open Sans", sans-serif;
+      }
+      .mono {
+        font-family: "Fira Code", monospace;
+      }
+      .material-icons.md-18 {
+        font-size: 18px;
+      }
+      .material-icons.md-24 {
+        font-size: 24px;
+      }
+      .material-icons.md-36 {
+        font-size: 36px;
+      }
+      .material-icons.md-48 {
+        font-size: 48px;
+      }
+
+      .lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 1em;
+      }
+      .lds-ellipsis div {
+        position: absolute;
+
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #ccc;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      .lds-ellipsis div:nth-child(1) {
+        left: 8px;
+        animation: lds-ellipsis1 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(2) {
+        left: 8px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(3) {
+        left: 32px;
+        animation: lds-ellipsis2 0.6s infinite;
+      }
+      .lds-ellipsis div:nth-child(4) {
+        left: 56px;
+        animation: lds-ellipsis3 0.6s infinite;
+      }
+      @keyframes lds-ellipsis1 {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes lds-ellipsis3 {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(0);
+        }
+      }
+      @keyframes lds-ellipsis2 {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+    </style>
+  </head>
+  <body class="sans-serif copy flex">
+    <div id="root" class="flex flex-auto"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>
